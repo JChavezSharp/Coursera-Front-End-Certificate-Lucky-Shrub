@@ -1,0 +1,140 @@
+:root {
+    --main_brand_color: #5f7264;
+    --secondary_brand_color:#9f6544;
+    --dark_brand_color: #2f4f4f;
+
+    --white_text: #fff;
+    --yellow_text:#f0e68c;
+    --gray_text: #333333;
+
+    --background_color: #f4efe8;
+    --container_bg_color: #cfad99;
+    --container_hover_bg_color: hsla(22, 36%, 71%, 0.60);
+
+    --main_font: 'Noto Sans';
+}
+/* grids */
+.subarticle-container-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.subarticle-grid {
+    display: grid;
+    /* grid-template-rows: 12.5% 30% 57.5%; */
+    grid-template-rows: 1fr 3fr 4fr;
+}
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+/* this applies to the whole page */
+body {
+    margin: 1rem auto 0 auto;
+    background-color: var(--background_color);
+    max-width: min(90%, 70rem);
+    font-family: var(--main_font), 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    letter-spacing: 1px;
+}
+h1, h2 {
+    margin: 0;
+}
+h1 {
+    text-align: center;
+    font-size: 4rem;
+    color: var(--white_text)
+}
+h2 {
+    text-align: center;
+    font-size: rem;
+    color: var(--dark_brand_color)
+}
+img {
+    max-width: 100%;
+}
+/* header */
+header > img{
+    max-width: 7.5%;
+    display: block;
+    margin-inline: auto;
+}
+
+/* navigation */
+nav ul{
+    background-color: var(--main_brand_color);
+
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+
+    padding: 1rem;
+}
+nav li {
+    list-style-type: none;
+}
+nav a {
+    text-decoration: none;
+    color: var(--white_text);
+    font-size: 1.5rem;
+}
+nav a:hover {
+    /* Here is the Hover effect! */
+    cursor:pointer;
+    color:var(--secondary_brand_color);
+}
+/* main content */
+.main-banner {
+    background-image: url(images/jonathan-kemper-4z3lnwEvZQw-unsplash.jpg);
+    padding: 3rem;
+    margin: 2rem 0 2rem 0;
+    color: var(--white_text);
+    
+    border: 2px solid var(--main_brand_color);
+    border-radius: 10px;
+    text-shadow: 4px 4px 2px black;
+}
+.discount-code {
+    color: var(--yellow_text);
+    font-size: 1.1em;
+}
+.main-banner p {
+    font-size: 1.5rem;
+    font-weight: 900;
+    text-align: center;
+}
+.subarticle-grid {
+    background-color: var(--container_bg_color);
+    border: 2px var(--secondary_brand_color) solid;
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+}
+.sub-article-container {
+    gap: 2rem;
+}
+.subarticle-grid:hover {
+    /* Here is the Hover effect! */
+    background-color: var(--container_hover_bg_color);
+}
+
+.subarticle-grid p {
+    color: var(--gray_text);
+    text-align: justify;
+    font-weight: 600;
+}
+
+/* footer */
+footer {
+    background-color: var(--dark_brand_color);
+    padding: 2rem 4rem 1rem 4rem;
+    color: var(--white_text)
+}
+footer div:nth-child(2) {
+    align-self: end;
+    justify-self: end;
+}
+footer img {
+    max-width: 2rem;;
+}
+
